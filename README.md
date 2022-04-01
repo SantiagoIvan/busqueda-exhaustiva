@@ -13,4 +13,4 @@ Mismo problema, pero retornamos la combinacion de numeros que da como resultado 
 
 # Best_sum(target_sum, arr)
 
-Mismo problema, pero retornando la combinacion mas corta
+Mismo problema, pero retornando la combinacion mas corta. Se debe realizar una busqueda exhaustiva por todo el arbol para saber todas las combinaciones que lleven al resultado. Es necesaria una estructura para almaccenar resultados intermedios y que sea eficiente, y no se cuelgue si le tiro un numero grande

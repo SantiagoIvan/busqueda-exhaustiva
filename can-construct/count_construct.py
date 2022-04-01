@@ -24,3 +24,7 @@ print(
         {},
     )
 )
+print(count_construct("purple", ["purp", "p", "ur", "le", "purpl"], {}))
+print(
+    count_construct("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"], {})
+)

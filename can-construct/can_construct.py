@@ -18,18 +18,22 @@ def can_construct(target_word, array):
     return False
 
 
-print(can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
-print(can_construct("abcdeef", ["ab", "abc", "cd", "def", "abcd"]))
-print(can_construct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]))
-
-memo = {}
+# print(can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
+# print(can_construct("abcdeef", ["ab", "abc", "cd", "def", "abcd"]))
+# print(can_construct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]))
+# print(
+#     can_construct(
+#         "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+#         ["e", "ee", "eee", "eeee", "eeeee", "eeeeee", "eeeeeee"],
+#     )
+# )  # este tarda infinitamente
 
 
 def can_construct_v2(target_word, array, memo={}):
     if not len(target_word):
         return True
     if target_word in memo:
-        return True
+        return memo[target_word]
 
     for word in array:
         len_word = len(word)
@@ -38,9 +42,16 @@ def can_construct_v2(target_word, array, memo={}):
         ):
             memo[target_word] = True
             return True
+    memo[target_word] = False
     return False
 
 
-print(can_construct_v2("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
-print(can_construct_v2("abcdeef", ["ab", "abc", "cd", "def", "abcd"]))
-print(can_construct_v2("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]))
+# print(can_construct_v2("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
+# print(can_construct_v2("abcdeeeef", ["ab", "abc", "cd", "def", "abcd"]))
+# print(can_construct_v2("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]))
+print(
+    can_construct_v2(
+        "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+        ["e", "ee", "eee", "eeee", "eeeee", "eeeeee", "eeeeeee"],
+    )
+)

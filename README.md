@@ -18,6 +18,11 @@ Mismo problema, pero retornando la combinacion mas corta. Se debe realizar una b
 #  can_construct(target_word, array_of_words)
 
 Retorna True si es posible armar la palabra con esa lista de palabras, realizando combinacines
- # count_construct(target_word, array_of_words)
 
- Retorna la cantidad de combinaciones
+# count_construct(target_word, array_of_words)
+
+Retorna la cantidad de combinaciones
+
+# all_construct(target_word, array_of_words)
+
+Misma idea, retornand todas las combinaciones existentes
